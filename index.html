@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rumah Makan Laksana — Masakan Sunda Kuningan</title>
+<meta name="description" content="Rumah Makan Laksana, masakan Sunda di Cigandamekar, Kuningan. Telpon (0232) 613182. Buka 09.00–21.00.">
+<style>
+:root{
+  --green:#1a3c2e;
+  --green-deep:#122a21;
+  --cream:#faf5e9;
+  --cream-2:#f3ead6;
+  --terra:#c1552b;
+  --terra-deep:#9a4120;
+  --ink:#2b2620;
+  --muted:#6f6455;
+  --card:#fffdf7;
+  --line:#e6dcc4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;color:var(--green)}
+img{max-width:100%;display:block}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:var(--green);
+  border-bottom:3px solid var(--terra);
+}
+.site-header .bar{
+  max-width:680px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-family:Georgia,serif;color:var(--cream);font-size:1.05rem;line-height:1.2}
+.brand-name small{display:block;font-family:sans-serif;font-size:.68rem;letter-spacing:.14em;color:#d9cfae;text-transform:uppercase}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--terra);color:#fff;text-decoration:none;
+  font-weight:700;font-size:.95rem;
+  padding:11px 20px;border-radius:10px;border:none;cursor:pointer;
+  transition:background .18s ease;
+}
+.btn:hover{background:var(--terra-deep)}
+.btn svg{width:16px;height:16px}
+
+/* Hero */
+.hero{
+  background:var(--green-deep);
+  color:var(--cream);
+  padding:56px 0 64px;
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:auto -40px -70px auto;
+  width:260px;height:260px;border:2px solid rgba(193,85,43,.35);border-radius:50%;
+}
+.hero h1{color:var(--cream);font-size:2.5rem;line-height:1.15;margin-bottom:6px}
+.hero .tagline{color:#e7dcae;font-size:1.05rem;font-style:italic;margin-bottom:18px}
+.rating{display:flex;align-items:center;gap:10px;margin-bottom:22px;flex-wrap:wrap}
+.stars{color:#e8a33d;letter-spacing:2px;font-size:1.05rem}
+.rating small{color:#cfc4a4;font-size:.85rem}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  border:2px solid #8fa595;color:var(--cream);text-decoration:none;
+  font-weight:600;padding:9px 18px;border-radius:10px;
+}
+.btn-outline:hover{border-color:var(--cream)}
+
+/* Sections */
+section{padding:44px 0}
+.sec-head{margin-bottom:22px}
+.sec-kicker{
+  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--terra);margin-bottom:8px;
+}
+.sec-head h2{font-size:1.75rem;line-height:1.25;margin-bottom:6px}
+.sec-head p{color:var(--muted);font-size:.95rem}
+
+/* Photo figures */
+figure.photocard{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  overflow:hidden;margin-bottom:22px;
+}
+figure.photocard img{width:100%;height:220px;object-fit:cover}
+figure.photocard figcaption{
+  font-size:.78rem;color:var(--muted);padding:10px 16px;
+  border-top:1px solid var(--line);font-style:italic;
+}
+
+/* Menu grid */
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.menu-card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:18px 16px;display:flex;flex-direction:column;gap:8px;
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.menu-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(26,60,46,.10)}
+.menu-icon{
+  width:44px;height:44px;border-radius:12px;flex:none;
+  background:var(--cream-2);display:flex;align-items:center;justify-content:center;
+}
+.menu-icon svg{width:24px;height:24px;stroke:var(--terra);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.menu-card h3{font-size:1.02rem;line-height:1.3}
+.menu-card p{font-size:.82rem;color:var(--muted);flex:1}
+.price-tag{
+  align-self:flex-start;font-size:.75rem;font-weight:700;color:var(--green);
+  background:var(--cream-2);border:1px dashed #b9a97f;border-radius:8px;
+  padding:5px 10px;
+}
+
+/* Why */
+.why{background:var(--green);color:var(--cream)}
+.why h2{color:var(--cream)}
+.why .sec-kicker{color:#e8a33d}
+.why-list{display:grid;gap:14px}
+.why-item{
+  background:rgba(250,245,233,.06);border:1px solid rgba(250,245,233,.16);
+  border-radius:14px;padding:18px;display:flex;gap:14px;align-items:flex-start;
+}
+.why-num{
+  flex:none;width:38px;height:38px;border-radius:50%;
+  background:var(--terra);color:#fff;font-family:Georgia,serif;
+  font-size:1.2rem;display:flex;align-items:center;justify-content:center;
+}
+.why-item h3{color:var(--cream);font-size:1.05rem;margin-bottom:4px}
+.why-item p{font-size:.9rem;color:#d8cdb2}
+
+/* Visit */
+.visit-card{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:24px 22px;margin-bottom:16px;
+}
+.visit-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+.visit-row:last-child{margin-bottom:0}
+.visit-row svg{width:22px;height:22px;flex:none;stroke:var(--terra);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+.visit-row h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:2px}
+.visit-row p{font-size:1rem}
+.hours-note{font-size:.82rem;color:var(--muted);font-style:italic;margin-top:6px}
+.btn-big{
+  width:100%;justify-content:center;font-size:1.1rem;padding:16px;margin:6px 0 22px;
+}
+.maps-note{font-size:.85rem;color:var(--muted);text-align:center}
+
+/* Footer */
+footer{background:var(--green-deep);color:#b9ad8c;padding:28px 0;font-size:.8rem}
+footer p{margin-bottom:8px}
+footer a{color:#e8d9a8}
+.disclaimer{border-left:3px solid var(--terra);padding-left:12px;margin-bottom:14px;color:#d8cdb2}
+
+@media(min-width:640px){
+  .menu-grid{grid-template-columns:1fr 1fr 1fr 1fr}
+  .hero h1{font-size:3rem}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="#top" aria-label="Rumah Makan Laksana">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <circle cx="17" cy="17" r="15" fill="none" stroke="#c1552b" stroke-width="2"/>
+        <path d="M17 8 L24 22 L10 22 Z" fill="none" stroke="#faf5e9" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="17" cy="15" r="2" fill="#c1552b"/>
+      </svg>
+      <span class="brand-name">Rumah Makan Laksana<small>Masakan Sunda &middot; Kuningan</small></span>
+    </a>
+    <a class="btn" href="tel:+62232613182">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Telepon
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <h1>Rumah Makan Laksana</h1>
+      <p class="tagline">Masakan Sunda rumahan — nasi liwet, gurame, sambal dadak.</p>
+      <div class="rating" aria-label="Rating 4,5 dari 5, dari 2000 lebih ulasan Google Maps">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+        <small>4,5/5 dari 2.000+ ulasan Google Maps</small>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn" href="tel:+62232613182">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (0232) 613182
+        </a>
+        <a class="btn-outline" href="#menu">Lihat Menu</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-kicker">Menu Andalan</span>
+        <h2>Hidangan yang bikin kangen rumah</h2>
+        <p>Menu sesuai yang tercatat di sumber kuliner Kuningan. Harga berubah mengikuti musim — tanya langsung via telepon.</p>
+      </div>
+
+      <figure class="photocard">
+        <img src="https://inimahsumedang.com/wp-content/uploads/thumbnails/X4KL6QdH2W2dtnTF1jhNiOIYUcDz1D87TGb32Wow.jpg" alt="Ilustrasi hidangan nasi liwet khas Sunda" loading="lazy">
+        <figcaption>Foto ilustrasi kategori — masakan Sunda khas. Bukan foto asli rumah makan ini.</figcaption>
+      </figure>
+
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div class="menu-icon"><svg viewBox="0 0 24 24"><path d="M6 12c2-4 5-6 9-6 3 0 5 2 5 2s-1 3-4 4l-2 4"/><circle cx="14" cy="9" r="1"/></svg></div>
+          <h3>Gurame</h3>
+          <p>Goreng, bakar, atau asam manis — andalan rumah makan Sunda.</p>
+          <span class="price-tag">Tanya via telepon</span>
+        </article>
+        <article class="menu-card">
+          <div class="menu-icon"><svg viewBox="0 0 24 24"><path d="M4 16c4 2 12 2 16-2"/><path d="M6 16c1-5 4-8 8-9"/><circle cx="12" cy="7" r="1.5"/></svg></div>
+          <h3>Ayam</h3>
+          <p>Panggang atau goreng, bumbu rempah khas.</p>
+          <span class="price-tag">Tanya via telepon</span>
+        </article>
+        <article class="menu-card">
+          <div class="menu-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="14" rx="8" ry="4"/><path d="M12 10c0-3 1-5 3-6"/><path d="M12 10c0-3-1-5-3-6"/></svg></div>
+          <h3>Nasi Liwet</h3>
+          <p>Nasi gurih dimasak dengan santan dan rempah — wajib coba.</p>
+          <span class="price-tag">Tanya via telepon</span>
+        </article>
+        <article class="menu-card">
+          <div class="menu-icon"><svg viewBox="0 0 24 24"><rect x="5" y="9" width="14" height="8" rx="2"/><path d="M9 9V6M15 9V6M9 13h6"/></svg></div>
+          <h3>Gepuk</h3>
+          <p>Daging sapi empuk bumbu manis gurih.</p>
+          <span class="price-tag">Tanya via telepon</span>
+        </article>
+        <article class="menu-card">
+          <div class="menu-icon"><svg viewBox="0 0 24 24"><path d="M7 10h10v9H7z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg></div>
+          <h3>Babat Raweuy</h3>
+          <p>Olahan babat dengan bumbu raweuy pedas khas.</p>
+          <span class="price-tag">Tanya via telepon</span>
+        </article>
+        <article class="menu-card">
+          <div class="menu-icon"><svg viewBox="0 0 24 24"><path d="M12 3v10"/><path d="M5 8l7-5 7 5"/><path d="M4 13h16v7a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg></div>
+          <h3>Sop Iga</h3>
+          <p>Kuah hangat dengan iga empuk — favorit makan siang.</p>
+          <span class="price-tag">Tanya via telepon</span>
+        </article>
+        <article class="menu-card">
+          <div class="menu-icon"><svg viewBox="0 0 24 24"><path d="M12 21c-5 0-8-3-8-7 0-5 4-9 8-11 4 2 8 6 8 11 0 4-3 7-8 7z"/><path d="M12 12v7"/></svg></div>
+          <h3>Sayur Asem &amp; Oseng</h3>
+          <p>Sayur segar pendamping wajib hidangan Sunda.</p>
+          <span class="price-tag">Tanya via telepon</span>
+        </article>
+        <article class="menu-card">
+          <div class="menu-icon"><svg viewBox="0 0 24 24"><path d="M12 2c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/></svg></div>
+          <h3>Lalapan &amp; Sambal Dadak</h3>
+          <p>Pelengkap segar + sambal pedas nampol.</p>
+          <span class="price-tag">Tanya via telepon</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- KENAPA -->
+  <section class="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-kicker">Kenapa ke Sini</span>
+        <h2>Alasan orang balik lagi</h2>
+      </div>
+
+      <figure class="photocard" style="border-color:rgba(250,245,233,.16)">
+        <img src="https://apakatadata.com/wp-content/uploads/2025/03/menu-khas-sunda-di-restoran-saung-sunda.jpg" alt="Ilustrasi aneka menu khas restoran Sunda" loading="lazy">
+        <figcaption>Foto ilustrasi kategori — suasana rumah makan Sunda. Bukan foto asli rumah makan ini.</figcaption>
+      </figure>
+
+      <div class="why-list">
+        <div class="why-item">
+          <div class="why-num">1</div>
+          <div>
+            <h3>Masakan Sunda rumahan</h3>
+            <p>Nasi liwet, gurame, gepuk, sampai sambal dadak — resep gaya rumahan khas Tatar Sunda.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">2</div>
+          <div>
+            <h3>Cocok untuk porsi keluarga</h3>
+            <p>Menu disajikan gaya prasmanan rumahan, enak dimakan bareng keluarga besar.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">3</div>
+          <div>
+            <h3>Ramai di jam makan siang</h3>
+            <p>Dengan 2.000+ ulasan di Google Maps, tempat ini jadi langganan banyak warga — datang lebih awal biar kebagian.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOKASI & JAM -->
+  <section id="kunjungi">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-kicker">Lokasi &amp; Jam Buka</span>
+        <h2>Mampir atau pesan lewat telepon</h2>
+      </div>
+
+      <div class="visit-card">
+        <div class="visit-row">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <h3>Alamat</h3>
+            <p>Jl. Panawuan&ndash;Sangkanurip, Panawuan, Kec. Cigandamekar, Kab. Kuningan 45556</p>
+            <p style="margin-top:.4rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rumah+Makan+Laksana+Panawuan+Cigandamekar+Kuningan" target="_blank" rel="noopener">Lihat di Google Maps</a></p>
+          </div>
+        </div>
+        <div class="visit-row">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div>
+            <h3>Jam Buka</h3>
+            <p>09.00&ndash;21.00</p>
+            <p class="hours-note">Jam dapat berubah &mdash; konfirmasi via telepon.</p>
+          </div>
+        </div>
+        <div class="visit-row">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div>
+            <h3>Telepon</h3>
+            <p>(0232) 613182</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn btn-big" href="tel:+62232613182">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Telepon Sekarang
+      </a>
+      <p class="maps-note">Cari "Rumah Makan Laksana Kuningan" di Google Maps untuk rute.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="disclaimer">Contoh demo konsep — bukan website resmi RM Laksana. Dibuat untuk menunjukkan seperti apa tampilan web bisnis ini bisa terlihat.</p>
+    <p>Data diambil dari sumber publik: ulasan &amp; direktori kuliner Kuningan (gagaradio.org, id.alongwalker.co, TripAdvisor, Google Maps). Foto bersifat ilustrasi kategori, bukan foto asli rumah makan.</p>
+    <p>&copy; 2026 &middot; Rumah Makan Laksana, Cigandamekar, Kuningan</p>
+  </div>
+</footer>
+
+</body>
+</html>
